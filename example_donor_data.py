@@ -1,7 +1,7 @@
 import scanpy as sc
 import pandas as pd
 
-path = "./training_data/SEAAD_A9_RNAseq_DREAM.2025-07-15.h5ad"
+path = "../training_data/SEAAD_A9_RNAseq_DREAM.2025-07-15.h5ad"
 adata = sc.read_h5ad(path, backed="r")
 
 # donor 元信息（每个 donor 一行）

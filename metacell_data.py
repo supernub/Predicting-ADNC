@@ -2,7 +2,7 @@ import scanpy as sc
 import pandas as pd
 import numpy as np
 
-path = "./training_data/SEAAD_A9_RNAseq_DREAM.2025-07-15.h5ad"
+path = "../training_data/SEAAD_A9_RNAseq_DREAM.2025-07-15.h5ad"
 adata = sc.read_h5ad(path, backed="r")
 
 # 随机抽 100 个细胞
