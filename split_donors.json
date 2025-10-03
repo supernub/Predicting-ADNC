@@ -1,6 +1,7 @@
 {
   "seed": 42,
   "test_size": 0.2,
+  "donor_col": "Donor ID",
   "train_donors": [
     "H20.33.001",
     "H20.33.004",

@@ -1,0 +1,311 @@
+Using device: cuda:0, mixed_precision=fp16
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+[epoch 1 step 200] train_loss=1.9604
+  VAL: loss=1.7856 acc=0.4669 f1w=0.3698 mae=0.9010
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step200_mae0.9010.pt
+[epoch 1 step 400] train_loss=1.7537
+  VAL: loss=1.6405 acc=0.4999 f1w=0.3942 mae=0.8139
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step400_mae0.8139.pt
+[epoch 1 step 600] train_loss=1.6377
+  VAL: loss=1.5486 acc=0.5146 f1w=0.3929 mae=0.7626
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step600_mae0.7626.pt
+[epoch 1 step 800] train_loss=1.6249
+W0927 03:36:18.476000 323400 site-packages/torch/distributed/elastic/agent/server/api.py:723] Received 1 death signal, shutting down workers
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/agent/server/api.py", line 715, in run
+    result = self._invoke_run(role)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/agent/server/api.py", line 879, in _invoke_run
+    time.sleep(monitor_interval)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 323400 got signal: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spark/miniconda3/lib/python3.13/logging/__init__.py", line 1150, in emit
+    msg = self.format(record)
+  File "/home/spark/miniconda3/lib/python3.13/logging/__init__.py", line 998, in format
+    return fmt.format(record)
+           ~~~~~~~~~~^^^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/_logging/_internal.py", line 887, in format
+    filepath = make_module_path_relative(record.pathname)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/_logging/_internal.py", line 811, in make_module_path_relative
+    abs_path = pathlib.Path(abs_path).resolve()
+  File "/home/spark/miniconda3/lib/python3.13/pathlib/_local.py", line 670, in resolve
+    return self.with_segments(os.path.realpath(self, strict=strict))
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 445, in realpath
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 323400 got signal: 1
+Call stack:
+  File "/home/spark/miniconda3/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/launch.py", line 1226, in launch_command
+    multi_gpu_launcher(args)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    result = agent.run()
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/agent/server/api.py", line 724, in run
+    self._shutdown(e.sigval)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/agent/server/local_elastic_agent.py", line 368, in _shutdown
+    self._pcontext.close(death_sig)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 577, in close
+    self._close(death_sig=death_sig, timeout=timeout)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 900, in _close
+    logger.warning(
+Message: 'Sending process %s closing signal %s'
+Arguments: (323437, 'SIGHUP')
+W0927 03:36:18.480000 323400 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 323438 closing signal SIGHUP
+W0927 03:36:18.481000 323400 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 323439 closing signal SIGHUP
+W0927 03:36:18.481000 323400 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 323440 closing signal SIGHUP
+Traceback (most recent call last):
+  File "/home/spark/miniconda3/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/launch.py", line 1226, in launch_command
+    multi_gpu_launcher(args)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+    ~~~~~~~~~~~~~~~
+        config=config,
+        ~~~~~~~~~~~~~~
+        entrypoint=cmd,
+        ~~~~~~~~~~~~~~~
+    )(*cmd_args)
+    ~^^^^^^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    result = agent.run()
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/agent/server/api.py", line 715, in run
+    result = self._invoke_run(role)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/agent/server/api.py", line 879, in _invoke_run
+    time.sleep(monitor_interval)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 323400 got signal: 1
+W0927 05:14:50.507000 361772 site-packages/torch/distributed/elastic/agent/server/api.py:723] Received 2 death signal, shutting down workers
+W0927 05:14:50.507000 361772 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 361809 closing signal SIGINT
+W0927 05:14:50.508000 361772 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 361810 closing signal SIGINT
+W0927 05:14:50.508000 361772 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 361811 closing signal SIGINT
+W0927 05:14:50.508000 361772 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 361812 closing signal SIGINT
+Traceback (most recent call last):
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC/train_accelerate.py", line 13, in <module>
+    from dataset_varlen import VariableLengthSequenceDataset, CSRMemmapDataset, pad_collate, load_h5ad_with_split, load_labels_and_split_only
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC/dataset_varlen.py", line 5, in <module>
+    import scanpy as sc
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/scanpy/__init__.py", line 9, in <module>
+    from ._utils import check_versions
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/scanpy/_utils/__init__.py", line 33, in <module>
+    from anndata import __version__ as anndata_version
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/__init__.py", line 10, in <module>
+    from ._core.anndata import AnnData
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/anndata.py", line 27, in <module>
+    from .. import utils
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/utils.py", line 15, in <module>
+    from ._core.sparse_dataset import BaseCompressedSparseDataset
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/sparse_dataset.py", line 32, in <module>
+    from .._settings import settings
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_settings.py", line 16, in <module>
+    from .compat import is_zarr_v2, old_positionals
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/compat/__init__.py", line 124, in <module>
+    import xarray
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/__init__.py", line 3, in <module>
+    from xarray import coders, groupers, indexes, testing, tutorial, ufuncs
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/coders.py", line 6, in <module>
+    from xarray.coding.times import CFDatetimeCoder, CFTimedeltaCoder
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/coding/times.py", line 15, in <module>
+    from xarray.coding.common import (
+    ...<7 lines>...
+    )
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1155, in get_code
+  File "<frozen importlib._bootstrap_external>", line 784, in _compile_bytecode
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC/train_accelerate.py", line 13, in <module>
+    from dataset_varlen import VariableLengthSequenceDataset, CSRMemmapDataset, pad_collate, load_h5ad_with_split, load_labels_and_split_only
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC/dataset_varlen.py", line 5, in <module>
+    import scanpy as sc
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/scanpy/__init__.py", line 9, in <module>
+    from ._utils import check_versions
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/scanpy/_utils/__init__.py", line 33, in <module>
+    from anndata import __version__ as anndata_version
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/__init__.py", line 10, in <module>
+    from ._core.anndata import AnnData
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/anndata.py", line 27, in <module>
+    from .. import utils
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/utils.py", line 15, in <module>
+    from ._core.sparse_dataset import BaseCompressedSparseDataset
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/sparse_dataset.py", line 32, in <module>
+    from .._settings import settings
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_settings.py", line 16, in <module>
+    from .compat import is_zarr_v2, old_positionals
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/compat/__init__.py", line 124, in <module>
+    import xarray
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/__init__.py", line 3, in <module>
+    from xarray import coders, groupers, indexes, testing, tutorial, ufuncs
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/coders.py", line 6, in <module>
+    from xarray.coding.times import CFDatetimeCoder, CFTimedeltaCoder
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/coding/times.py", line 15, in <module>
+    from xarray.coding.common import (
+    ...<7 lines>...
+    )
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/coding/common.py", line 9, in <module>
+    from xarray.core.variable import Variable
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/core/variable.py", line 20, in <module>
+    from xarray.computation import ops
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/computation/ops.py", line 21, in <module>
+    import bottleneck as bn
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1559, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1533, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1660, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 133, in _path_join
+KeyboardInterrupt
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC/train_accelerate.py", line 13, in <module>
+    from dataset_varlen import VariableLengthSequenceDataset, CSRMemmapDataset, pad_collate, load_h5ad_with_split, load_labels_and_split_only
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC/train_accelerate.py", line 13, in <module>
+    from dataset_varlen import VariableLengthSequenceDataset, CSRMemmapDataset, pad_collate, load_h5ad_with_split, load_labels_and_split_only
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC/dataset_varlen.py", line 5, in <module>
+    import scanpy as sc
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC/dataset_varlen.py", line 5, in <module>
+    import scanpy as sc
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/scanpy/__init__.py", line 9, in <module>
+    from ._utils import check_versions
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/scanpy/__init__.py", line 9, in <module>
+    from ._utils import check_versions
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/scanpy/_utils/__init__.py", line 33, in <module>
+    from anndata import __version__ as anndata_version
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/scanpy/_utils/__init__.py", line 33, in <module>
+    from anndata import __version__ as anndata_version
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/__init__.py", line 10, in <module>
+    from ._core.anndata import AnnData
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/__init__.py", line 10, in <module>
+    from ._core.anndata import AnnData
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/anndata.py", line 27, in <module>
+    from .. import utils
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/anndata.py", line 27, in <module>
+    from .. import utils
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/utils.py", line 15, in <module>
+    from ._core.sparse_dataset import BaseCompressedSparseDataset
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/utils.py", line 15, in <module>
+    from ._core.sparse_dataset import BaseCompressedSparseDataset
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/sparse_dataset.py", line 32, in <module>
+    from .._settings import settings
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/sparse_dataset.py", line 32, in <module>
+    from .._settings import settings
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_settings.py", line 16, in <module>
+    from .compat import is_zarr_v2, old_positionals
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_settings.py", line 16, in <module>
+    from .compat import is_zarr_v2, old_positionals
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/compat/__init__.py", line 124, in <module>
+    import xarray
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/compat/__init__.py", line 124, in <module>
+    import xarray
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/__init__.py", line 3, in <module>
+    from xarray import coders, groupers, indexes, testing, tutorial, ufuncs
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/__init__.py", line 3, in <module>
+    from xarray import coders, groupers, indexes, testing, tutorial, ufuncs
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/groupers.py", line 27, in <module>
+    from xarray.computation.apply_ufunc import apply_ufunc
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/coders.py", line 6, in <module>
+    from xarray.coding.times import CFDatetimeCoder, CFTimedeltaCoder
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/computation/apply_ufunc.py", line 35, in <module>
+    from xarray.structure.alignment import deep_align
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/coding/times.py", line 15, in <module>
+    from xarray.coding.common import (
+    ...<7 lines>...
+    )
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/structure/alignment.py", line 673, in <module>
+    T_Obj3 = TypeVar("T_Obj3", bound="Alignable")
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/coding/common.py", line 9, in <module>
+    from xarray.core.variable import Variable
+  File "/home/spark/miniconda3/lib/python3.13/typing.py", line 191, in _type_check
+    arg = _type_convert(arg, module=module, allow_special_forms=allow_special_forms)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/core/variable.py", line 21, in <module>
+    from xarray.computation.arithmetic import VariableArithmetic
+  File "/home/spark/miniconda3/lib/python3.13/typing.py", line 169, in _type_convert
+    return ForwardRef(arg, module=module, is_class=allow_special_forms)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/computation/arithmetic.py", line 19, in <module>
+    from xarray.core.common import ImplementsArrayReduce, ImplementsDatasetReduce
+  File "/home/spark/miniconda3/lib/python3.13/typing.py", line 1035, in __init__
+    code = compile(arg_to_compile, '<string>', 'eval')
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/xarray/core/common.py", line 14, in <module>
+    from xarray.core import dtypes, duck_array_ops, formatting, formatting_html
+  File "<frozen importlib._bootstrap>", line 1358, in _find_and_load
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/spark/miniconda3/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+    ~~~~~~~~~^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/launch.py", line 1226, in launch_command
+    multi_gpu_launcher(args)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+    ~~~~~~~~~~~~~~~
+        config=config,
+        ~~~~~~~~~~~~~~
+        entrypoint=cmd,
+        ~~~~~~~~~~~~~~~
+    )(*cmd_args)
+    ~^^^^^^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    result = agent.run()
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/agent/server/api.py", line 715, in run
+    result = self._invoke_run(role)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/agent/server/api.py", line 879, in _invoke_run
+    time.sleep(monitor_interval)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 361772 got signal: 2

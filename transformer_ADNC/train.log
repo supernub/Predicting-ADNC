@@ -1,0 +1,288 @@
+/home/spark/miniconda3/lib/python3.13/site-packages/accelerate/utils/launch.py:238: UserWarning: Port `29500` is already in use. Accelerate will attempt to launch in a standalone-like mode by finding an open port automatically for this session. If this current attempt fails, or for more control in future runs, please specify a different port (e.g., `--main_process_port <your_chosen_port>`) or use `--main_process_port 0` for automatic selection in your launch command or Accelerate config file.
+  warnings.warn(
+Using device: cuda:0, mixed_precision=fp16
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+[epoch 1 step 200] train_loss=2.0194
+  VAL: loss=1.7567 acc=0.4700 f1w=0.3322 mae=0.9112
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step200_mae0.9112.pt
+[epoch 1 step 400] train_loss=1.7573
+  VAL: loss=1.6434 acc=0.4938 f1w=0.3723 mae=0.8307
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step400_mae0.8307.pt
+[epoch 1 step 600] train_loss=1.6455
+  VAL: loss=1.5855 acc=0.5061 f1w=0.3896 mae=0.7881
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step600_mae0.7881.pt
+[epoch 1 step 800] train_loss=1.5734
+  VAL: loss=1.5543 acc=0.5089 f1w=0.4028 mae=0.7832
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step800_mae0.7832.pt
+[epoch 1 step 1000] train_loss=1.5606
+  VAL: loss=1.5383 acc=0.5090 f1w=0.4123 mae=0.7693
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step1000_mae0.7693.pt
+[epoch 1 step 1200] train_loss=1.5721
+  VAL: loss=1.6148 acc=0.4946 f1w=0.3665 mae=0.8208
+[epoch 1 step 1400] train_loss=1.5773
+  VAL: loss=1.5398 acc=0.5111 f1w=0.4056 mae=0.7626
+  >> saving /home/spark/xinze-project/Pred_ADNC/transformer_ADNC/outputs_adnc_ordinal_A9_memmap/best_epoch1_step1400_mae0.7626.pt
+[epoch 1 step 1600] train_loss=1.6013
+  VAL: loss=1.5722 acc=0.5035 f1w=0.4095 mae=0.7853
+[epoch 1 step 1800] train_loss=1.6197
+  VAL: loss=1.6138 acc=0.5026 f1w=0.3887 mae=0.7942
+[epoch 1 step 2000] train_loss=1.6228
+  VAL: loss=1.6249 acc=0.5009 f1w=0.3883 mae=0.8019
+[epoch 1 step 2200] train_loss=1.6102
+  VAL: loss=1.6514 acc=0.4996 f1w=0.3833 mae=0.8031
+[epoch 1 step 2400] train_loss=1.6330
+  VAL: loss=1.6039 acc=0.5013 f1w=0.3861 mae=0.7958
+[epoch 1 step 2600] train_loss=1.6254
+  VAL: loss=1.5972 acc=0.5008 f1w=0.3899 mae=0.7892
+[epoch 1 step 2800] train_loss=1.5955
+  VAL: loss=1.5964 acc=0.5026 f1w=0.3951 mae=0.7889
+[epoch 1 step 3000] train_loss=1.6403
+  VAL: loss=1.6233 acc=0.4985 f1w=0.3820 mae=0.8064
+[epoch 1 step 3200] train_loss=1.6421
+  VAL: loss=1.6435 acc=0.4917 f1w=0.4002 mae=0.8176
+[epoch 1 step 3400] train_loss=1.6555
+  VAL: loss=1.6520 acc=0.4819 f1w=0.3731 mae=0.8416
+[epoch 1 step 3600] train_loss=1.6633
+  VAL: loss=1.6633 acc=0.4888 f1w=0.3738 mae=0.8315
+[epoch 1 step 3800] train_loss=1.6707
+  VAL: loss=1.6405 acc=0.4860 f1w=0.3816 mae=0.8343
+[epoch 1 step 4000] train_loss=1.6665
+  VAL: loss=1.6911 acc=0.4796 f1w=0.3607 mae=0.8535
+[epoch 1 step 4200] train_loss=1.6602
+  VAL: loss=1.6541 acc=0.4858 f1w=0.3764 mae=0.8372
+[epoch 1 step 4400] train_loss=1.6861
+  VAL: loss=1.6380 acc=0.4860 f1w=0.3825 mae=0.8316
+[epoch 1 step 4600] train_loss=1.6600
+  VAL: loss=1.6814 acc=0.4795 f1w=0.3568 mae=0.8574
+[epoch 1 step 4800] train_loss=1.6663
+  VAL: loss=1.7155 acc=0.4829 f1w=0.3634 mae=0.8512
+[epoch 1 step 5000] train_loss=1.6568
+  VAL: loss=1.6780 acc=0.4821 f1w=0.3702 mae=0.8441
+[epoch 1 step 5200] train_loss=1.6631
+  VAL: loss=1.7021 acc=0.4823 f1w=0.3720 mae=0.8450
+[epoch 1 step 5400] train_loss=1.6844
+  VAL: loss=1.7276 acc=0.4793 f1w=0.3637 mae=0.8556
+[epoch 1 step 5600] train_loss=1.6685
+  VAL: loss=1.6856 acc=0.4766 f1w=0.3610 mae=0.8592
+[epoch 1 step 5800] train_loss=1.6709
+  VAL: loss=1.7641 acc=0.4726 f1w=0.3376 mae=0.8838
+[epoch 1 step 6000] train_loss=1.6832
+  VAL: loss=1.6994 acc=0.4788 f1w=0.3602 mae=0.8592
+[epoch 1 step 6200] train_loss=1.6530
+  VAL: loss=1.6830 acc=0.4791 f1w=0.3730 mae=0.8453
+[epoch 1 step 6400] train_loss=1.6661
+  VAL: loss=1.6999 acc=0.4707 f1w=0.3370 mae=0.8853
+[epoch 1 step 6600] train_loss=1.6776
+  VAL: loss=1.6513 acc=0.4811 f1w=0.3700 mae=0.8420
+[epoch 1 step 6800] train_loss=1.6781
+  VAL: loss=1.6606 acc=0.4809 f1w=0.3711 mae=0.8376
+[epoch 1 step 7000] train_loss=1.6524
+  VAL: loss=1.6541 acc=0.4787 f1w=0.3772 mae=0.8375
+[epoch 1 step 7200] train_loss=1.6453
+  VAL: loss=1.6672 acc=0.4767 f1w=0.3589 mae=0.8535
+[epoch 1 step 7400] train_loss=1.6406
+  VAL: loss=1.6472 acc=0.4812 f1w=0.3886 mae=0.8310
+[epoch 1 step 7600] train_loss=1.6493
+  VAL: loss=1.6406 acc=0.4826 f1w=0.3860 mae=0.8275
+[epoch 1 step 7800] train_loss=1.6702
+  VAL: loss=1.6804 acc=0.4773 f1w=0.3655 mae=0.8499
+[epoch 1 step 8000] train_loss=1.6395
+  VAL: loss=1.6645 acc=0.4796 f1w=0.3695 mae=0.8449
+[epoch 1 END] VAL: loss=1.6590 acc=0.4751 f1w=0.3744 mae=0.8401
+[epoch 2 step 8200] train_loss=0.3552
+  VAL: loss=1.6436 acc=0.4746 f1w=0.3879 mae=0.8350
+[epoch 2 step 8400] train_loss=1.6443
+  VAL: loss=1.6616 acc=0.4779 f1w=0.3761 mae=0.8442
+[epoch 2 step 8600] train_loss=1.6326
+  VAL: loss=1.6709 acc=0.4655 f1w=0.3951 mae=0.8453
+[epoch 2 step 8800] train_loss=1.6486
+  VAL: loss=1.6595 acc=0.4759 f1w=0.3786 mae=0.8491
+[epoch 2 step 9000] train_loss=1.6479
+  VAL: loss=1.6459 acc=0.4752 f1w=0.3823 mae=0.8396
+[epoch 2 step 9200] train_loss=1.6550
+  VAL: loss=1.6655 acc=0.4710 f1w=0.3732 mae=0.8534
+[epoch 2 step 9400] train_loss=1.6514
+  VAL: loss=1.6711 acc=0.4701 f1w=0.3461 mae=0.8786
+[epoch 2 step 9600] train_loss=1.6607
+  VAL: loss=1.6577 acc=0.4689 f1w=0.3694 mae=0.8566
+[epoch 2 step 9800] train_loss=1.6376
+  VAL: loss=1.6593 acc=0.4661 f1w=0.3767 mae=0.8541
+[epoch 2 step 10000] train_loss=1.6506
+  VAL: loss=1.6576 acc=0.4559 f1w=0.4032 mae=0.8450
+[epoch 2 step 10200] train_loss=1.6352
+  VAL: loss=1.6452 acc=0.4733 f1w=0.3830 mae=0.8381
+[epoch 2 step 10400] train_loss=1.6438
+  VAL: loss=1.6579 acc=0.4762 f1w=0.3788 mae=0.8391
+[epoch 2 step 10600] train_loss=1.6320
+  VAL: loss=1.6435 acc=0.4680 f1w=0.3887 mae=0.8386
+[epoch 2 step 10800] train_loss=1.6387
+  VAL: loss=1.6368 acc=0.4724 f1w=0.3875 mae=0.8339
+[epoch 2 step 11000] train_loss=1.6583
+  VAL: loss=1.6254 acc=0.4720 f1w=0.3936 mae=0.8283
+[epoch 2 step 11200] train_loss=1.6520
+  VAL: loss=1.6493 acc=0.4608 f1w=0.3976 mae=0.8254
+[epoch 2 step 11400] train_loss=1.6336
+  VAL: loss=1.6658 acc=0.4714 f1w=0.3650 mae=0.8534
+[epoch 2 step 11600] train_loss=1.6602
+  VAL: loss=1.6556 acc=0.4636 f1w=0.3779 mae=0.8494
+[epoch 2 step 11800] train_loss=1.6417
+  VAL: loss=1.6436 acc=0.4667 f1w=0.3923 mae=0.8344
+[epoch 2 step 12000] train_loss=1.6485
+  VAL: loss=1.6449 acc=0.4660 f1w=0.3877 mae=0.8361
+[epoch 2 step 12200] train_loss=1.6192
+  VAL: loss=1.6453 acc=0.4607 f1w=0.3960 mae=0.8339
+[epoch 2 step 12400] train_loss=1.6405
+  VAL: loss=1.6351 acc=0.4664 f1w=0.4026 mae=0.8330
+[epoch 2 step 12600] train_loss=1.6205
+  VAL: loss=1.6292 acc=0.4679 f1w=0.3817 mae=0.8326
+[epoch 2 step 12800] train_loss=1.6288
+  VAL: loss=1.6277 acc=0.4664 f1w=0.3915 mae=0.8320
+[epoch 2 step 13000] train_loss=1.6466
+  VAL: loss=1.6660 acc=0.4695 f1w=0.3737 mae=0.8462
+[epoch 2 step 13200] train_loss=1.6507
+  VAL: loss=1.6600 acc=0.4689 f1w=0.3598 mae=0.8586
+[epoch 2 step 13400] train_loss=1.6289
+  VAL: loss=1.6922 acc=0.4689 f1w=0.3600 mae=0.8619
+[epoch 2 step 13600] train_loss=1.6319
+  VAL: loss=1.6593 acc=0.4688 f1w=0.3721 mae=0.8506
+[epoch 2 step 13800] train_loss=1.6587
+  VAL: loss=1.6398 acc=0.4549 f1w=0.3950 mae=0.8269
+[epoch 2 step 14000] train_loss=1.6378
+  VAL: loss=1.6811 acc=0.4638 f1w=0.3451 mae=0.8745
+[epoch 2 step 14200] train_loss=1.6182
+  VAL: loss=1.6541 acc=0.4594 f1w=0.3522 mae=0.8636
+[epoch 2 step 14400] train_loss=1.6145
+  VAL: loss=1.6397 acc=0.4461 f1w=0.4008 mae=0.8397
+[epoch 2 step 14600] train_loss=1.6364
+  VAL: loss=1.6335 acc=0.4612 f1w=0.3748 mae=0.8398
+[epoch 2 step 14800] train_loss=1.6103
+  VAL: loss=1.6495 acc=0.4552 f1w=0.3547 mae=0.8564
+[epoch 2 step 15000] train_loss=1.6512
+  VAL: loss=1.6207 acc=0.4493 f1w=0.3893 mae=0.8249
+[epoch 2 step 15200] train_loss=1.6352
+  VAL: loss=1.6352 acc=0.4425 f1w=0.3818 mae=0.8320
+[epoch 2 step 15400] train_loss=1.6543
+  VAL: loss=1.6214 acc=0.4458 f1w=0.3814 mae=0.8286
+[epoch 2 step 15600] train_loss=1.6238
+  VAL: loss=1.6213 acc=0.4432 f1w=0.3825 mae=0.8316
+[epoch 2 step 15800] train_loss=1.6260
+  VAL: loss=1.6190 acc=0.4434 f1w=0.3798 mae=0.8378
+[epoch 2 step 16000] train_loss=1.6121
+  VAL: loss=1.6481 acc=0.4509 f1w=0.3537 mae=0.8653
+[epoch 2 step 16200] train_loss=1.6008
+  VAL: loss=1.6193 acc=0.4505 f1w=0.3744 mae=0.8413
+[epoch 2 END] VAL: loss=1.6107 acc=0.4244 f1w=0.3681 mae=0.8220
+[epoch 3 step 16400] train_loss=0.7038
+  VAL: loss=1.6089 acc=0.4158 f1w=0.3787 mae=0.8174
+[epoch 3 step 16600] train_loss=1.6297
+  VAL: loss=1.6358 acc=0.4508 f1w=0.3582 mae=0.8558
+[epoch 3 step 16800] train_loss=1.6320
+  VAL: loss=1.6202 acc=0.4278 f1w=0.3806 mae=0.8385
+[epoch 3 step 17000] train_loss=1.6320
+  VAL: loss=1.6262 acc=0.4293 f1w=0.3597 mae=0.8529
+[epoch 3 step 17200] train_loss=1.6243
+  VAL: loss=1.6232 acc=0.4409 f1w=0.3743 mae=0.8422
+[epoch 3 step 17400] train_loss=1.5975
+  VAL: loss=1.6089 acc=0.4343 f1w=0.3731 mae=0.8307
+[rank0]:[E929 15:45:14.260095185 ProcessGroupNCCL.cpp:685] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=35124, OpType=ALLREDUCE, NumelIn=263939, NumelOut=263939, Timeout(ms)=600000) ran for 600033 milliseconds before timing out.
+[rank0]:[E929 15:45:14.262922930 ProcessGroupNCCL.cpp:2252] [PG ID 0 PG GUID 0(default_pg) Rank 0]  failure detected by watchdog at work sequence id: 35124 PG status: last enqueued work: 35126, last completed work: 35123
+[rank0]:[E929 15:45:14.262931997 ProcessGroupNCCL.cpp:732] Stack trace of the failed collective not found, potentially because FlightRecorder is disabled. You can enable it by setting TORCH_NCCL_TRACE_BUFFER_SIZE to a non-zero value.
+[rank0]:[E929 15:45:14.262960541 ProcessGroupNCCL.cpp:2584] [PG ID 0 PG GUID 0(default_pg) Rank 0] First PG on this rank to signal dumping.
+[rank3]:[E929 15:45:14.267203521 ProcessGroupNCCL.cpp:685] [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=35124, OpType=ALLREDUCE, NumelIn=263939, NumelOut=263939, Timeout(ms)=600000) ran for 600041 milliseconds before timing out.
+[rank3]:[E929 15:45:14.267377800 ProcessGroupNCCL.cpp:2252] [PG ID 0 PG GUID 0(default_pg) Rank 3]  failure detected by watchdog at work sequence id: 35124 PG status: last enqueued work: 35125, last completed work: 35123
+[rank3]:[E929 15:45:14.267383822 ProcessGroupNCCL.cpp:732] Stack trace of the failed collective not found, potentially because FlightRecorder is disabled. You can enable it by setting TORCH_NCCL_TRACE_BUFFER_SIZE to a non-zero value.
+[rank3]:[E929 15:45:14.267409550 ProcessGroupNCCL.cpp:2584] [PG ID 0 PG GUID 0(default_pg) Rank 3] First PG on this rank to signal dumping.
+[rank1]:[E929 15:45:14.271205866 ProcessGroupNCCL.cpp:685] [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=35124, OpType=ALLREDUCE, NumelIn=263939, NumelOut=263939, Timeout(ms)=600000) ran for 600044 milliseconds before timing out.
+[rank1]:[E929 15:45:14.271356671 ProcessGroupNCCL.cpp:2252] [PG ID 0 PG GUID 0(default_pg) Rank 1]  failure detected by watchdog at work sequence id: 35124 PG status: last enqueued work: 35125, last completed work: 35123
+[rank1]:[E929 15:45:14.271366570 ProcessGroupNCCL.cpp:732] Stack trace of the failed collective not found, potentially because FlightRecorder is disabled. You can enable it by setting TORCH_NCCL_TRACE_BUFFER_SIZE to a non-zero value.
+[rank1]:[E929 15:45:14.271393290 ProcessGroupNCCL.cpp:2584] [PG ID 0 PG GUID 0(default_pg) Rank 1] First PG on this rank to signal dumping.
+[rank2]:[E929 15:45:14.304115369 ProcessGroupNCCL.cpp:685] [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=35124, OpType=ALLREDUCE, NumelIn=263939, NumelOut=263939, Timeout(ms)=600000) ran for 600078 milliseconds before timing out.
+[rank2]:[E929 15:45:14.304264040 ProcessGroupNCCL.cpp:2252] [PG ID 0 PG GUID 0(default_pg) Rank 2]  failure detected by watchdog at work sequence id: 35124 PG status: last enqueued work: 35125, last completed work: 35123
+[rank2]:[E929 15:45:14.304269741 ProcessGroupNCCL.cpp:732] Stack trace of the failed collective not found, potentially because FlightRecorder is disabled. You can enable it by setting TORCH_NCCL_TRACE_BUFFER_SIZE to a non-zero value.
+[rank2]:[E929 15:45:14.304296061 ProcessGroupNCCL.cpp:2584] [PG ID 0 PG GUID 0(default_pg) Rank 2] First PG on this rank to signal dumping.
+[rank1]:[E929 15:45:15.885206672 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 1] Received a dump signal due to a collective timeout from this local rank and we will try our best to dump the debug info. Last enqueued NCCL work: 35125, last completed NCCL work: 35123.This is most likely caused by incorrect usages of collectives, e.g., wrong sizes used across ranks, the order of collectives is not same for all ranks or the scheduled collective, for some reason, didn't run. Additionally, this can be caused by GIL deadlock or other reasons such as network errors or bugs in the communications library (e.g. NCCL), etc. 
+[rank3]:[E929 15:45:15.885229835 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 3] Received a dump signal due to a collective timeout from this local rank and we will try our best to dump the debug info. Last enqueued NCCL work: 35125, last completed NCCL work: 35123.This is most likely caused by incorrect usages of collectives, e.g., wrong sizes used across ranks, the order of collectives is not same for all ranks or the scheduled collective, for some reason, didn't run. Additionally, this can be caused by GIL deadlock or other reasons such as network errors or bugs in the communications library (e.g. NCCL), etc. 
+[rank0]:[E929 15:45:15.885266184 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 0] Received a dump signal due to a collective timeout from this local rank and we will try our best to dump the debug info. Last enqueued NCCL work: 35126, last completed NCCL work: 35123.This is most likely caused by incorrect usages of collectives, e.g., wrong sizes used across ranks, the order of collectives is not same for all ranks or the scheduled collective, for some reason, didn't run. Additionally, this can be caused by GIL deadlock or other reasons such as network errors or bugs in the communications library (e.g. NCCL), etc. 
+[rank2]:[E929 15:45:15.885298956 ProcessGroupNCCL.cpp:1870] [PG ID 0 PG GUID 0(default_pg) Rank 2] Received a dump signal due to a collective timeout from this local rank and we will try our best to dump the debug info. Last enqueued NCCL work: 35125, last completed NCCL work: 35123.This is most likely caused by incorrect usages of collectives, e.g., wrong sizes used across ranks, the order of collectives is not same for all ranks or the scheduled collective, for some reason, didn't run. Additionally, this can be caused by GIL deadlock or other reasons such as network errors or bugs in the communications library (e.g. NCCL), etc. 
+[rank1]:[E929 15:45:15.885382454 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 1] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank0]:[E929 15:45:15.885390429 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 0] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank2]:[E929 15:45:15.885410597 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 2] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank3]:[E929 15:45:15.885419785 ProcessGroupNCCL.cpp:1589] [PG ID 0 PG GUID 0(default_pg) Rank 3] ProcessGroupNCCL preparing to dump debug info. Include stack trace: 1
+[rank1]:[E929 15:46:16.025268080 ProcessGroupNCCL.cpp:746] [Rank 1] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank1]:[E929 15:46:16.025281886 ProcessGroupNCCL.cpp:760] [Rank 1] To avoid data inconsistency, we are taking the entire process down.
+[rank1]:[E929 15:46:16.028669488 ProcessGroupNCCL.cpp:2068] [PG ID 0 PG GUID 0(default_pg) Rank 1] Process group watchdog thread terminated with exception: [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=35124, OpType=ALLREDUCE, NumelIn=263939, NumelOut=263939, Timeout(ms)=600000) ran for 600044 milliseconds before timing out.
+Exception raised from checkTimeout at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:688 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7c7a5837eeb0 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x247 (0x7c79fb440147 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::Watchdog::runLoop() + 0x1591 (0x7c79fb443b61 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::Watchdog::run() + 0xd2 (0x7c79fb444ec2 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x7c7a5b4dbbf4 in /home/spark/miniconda3/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x94ac3 (0x7c7a5e494ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x1268c0 (0x7c7a5e5268c0 in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[E929 15:46:16.045035974 ProcessGroupNCCL.cpp:746] [Rank 2] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank2]:[E929 15:46:16.045046844 ProcessGroupNCCL.cpp:760] [Rank 2] To avoid data inconsistency, we are taking the entire process down.
+[rank2]:[E929 15:46:16.045549664 ProcessGroupNCCL.cpp:2068] [PG ID 0 PG GUID 0(default_pg) Rank 2] Process group watchdog thread terminated with exception: [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=35124, OpType=ALLREDUCE, NumelIn=263939, NumelOut=263939, Timeout(ms)=600000) ran for 600078 milliseconds before timing out.
+Exception raised from checkTimeout at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:688 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x73ee7757eeb0 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x247 (0x73ee1a640147 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::Watchdog::runLoop() + 0x1591 (0x73ee1a643b61 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::Watchdog::run() + 0xd2 (0x73ee1a644ec2 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x73ee7a6dbbf4 in /home/spark/miniconda3/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x94ac3 (0x73ee7d694ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x1268c0 (0x73ee7d7268c0 in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[E929 15:46:16.123328647 ProcessGroupNCCL.cpp:746] [Rank 3] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank3]:[E929 15:46:16.123341742 ProcessGroupNCCL.cpp:760] [Rank 3] To avoid data inconsistency, we are taking the entire process down.
+[rank3]:[E929 15:46:16.123841396 ProcessGroupNCCL.cpp:2068] [PG ID 0 PG GUID 0(default_pg) Rank 3] Process group watchdog thread terminated with exception: [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=35124, OpType=ALLREDUCE, NumelIn=263939, NumelOut=263939, Timeout(ms)=600000) ran for 600041 milliseconds before timing out.
+Exception raised from checkTimeout at /pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:688 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7704be17eeb0 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x247 (0x770461240147 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::Watchdog::runLoop() + 0x1591 (0x770461243b61 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::Watchdog::run() + 0xd2 (0x770461244ec2 in /home/spark/miniconda3/lib/python3.13/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x7704c12dbbf4 in /home/spark/miniconda3/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x94ac3 (0x7704c4294ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x1268c0 (0x7704c43268c0 in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[F929 15:53:15.887909301 ProcessGroupNCCL.cpp:1614] [PG ID 0 PG GUID 0(default_pg) Rank 0] [PG ID 0 PG GUID 0(default_pg) Rank 0] Terminating the process after attempting to dump debug info, due to collective timeout or exception.
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:829: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:1036: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  r = torch._C._cuda_getDeviceCount() if nvml_count < 0 else nvml_count
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:182: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:182: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:182: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:182: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+Using device: cpu:0, mixed_precision=fp16
+[W1002 16:53:42.776141669 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W1002 16:53:42.780133845 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W1002 16:53:42.781864946 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[W1002 16:53:42.782767416 Utils.hpp:137] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+Using device: cuda:0, mixed_precision=fp16
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/home/spark/miniconda3/lib/python3.13/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+[rank0]:[W1002 16:56:25.878606826 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[rank3]:[W1002 16:56:25.878781778 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[rank2]:[W1002 16:56:25.878784072 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+[rank1]:[W1002 16:56:25.878785505 Utils.hpp:112] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())

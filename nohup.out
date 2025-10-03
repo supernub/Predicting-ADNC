@@ -1,0 +1,67 @@
+usage: Cell-level Transformer + CORAL for ADNC (cell split)
+       [-h] --data-path DATA_PATH --split-json SPLIT_JSON
+       [--adnc-col ADNC_COL] [--log1p] [--top-k TOP_K] [--d-model D_MODEL]
+       [--layers LAYERS] [--heads HEADS] [--ffn FFN] [--dropout DROPOUT]
+       [--batch-size BATCH_SIZE] [--epochs EPOCHS] [--lr LR]
+       [--weight-decay WEIGHT_DECAY] [--seed SEED]
+       [--train-log-every TRAIN_LOG_EVERY] [--amp] [--device DEVICE]
+       [--device-ids DEVICE_IDS] [--out-dir OUT_DIR] [--save-model]
+       [--save-metrics] [--eval-log-every EVAL_LOG_EVERY]
+Cell-level Transformer + CORAL for ADNC (cell split): error: unrecognized arguments: --num-workers 8 --prefetch-factor 4
+/home/spark/xinze-project/Pred_ADNC/transformer_ADNC_cell_v925.py:394: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler() if args.amp else None
+[train] cells per ADNC: {np.int64(0): 130875, np.int64(1): 165650, np.int64(2): 265618, np.int64(3): 481875}
+[test ] cells per ADNC: {np.int64(0): 32719, np.int64(1): 41412, np.int64(2): 66404, np.int64(3): 120469}
+Traceback (most recent call last):
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC_cell_v925.py", line 433, in <module>
+    main()
+    ~~~~^^
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC_cell_v925.py", line 410, in main
+    tr_loss = train_one_epoch(model, dl_tr, optimizer, device, scaler, amp=args.amp, log_every=args.train_log_every)
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC_cell_v925.py", line 250, in train_one_epoch
+    for step, (gids, expr, mask, y) in enumerate(dl, 1):
+                                       ~~~~~~~~~^^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 734, in __next__
+    data = self._next_data()
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 790, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC_cell_v925.py", line 160, in __getitem__
+    self._ensure_open()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/spark/xinze-project/Pred_ADNC/transformer_ADNC_cell_v925.py", line 154, in _ensure_open
+    self.ad = sc.read_h5ad(self.path, backed="r")
+              ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/h5ad.py", line 246, in read_h5ad
+    return read_h5ad_backed(filename, mode)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/h5ad.py", line 189, in read_h5ad_backed
+    d.update({k: read_elem(f[k]) for k in attributes if k in f})
+                 ~~~~~~~~~^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/specs/registry.py", line 415, in read_elem
+    return Reader(_REGISTRY).read_elem(elem)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/utils.py", line 210, in func_wrapper
+    return func(*args, **kwargs)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/specs/registry.py", line 287, in read_elem
+    return read_func(elem)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/specs/methods.py", line 372, in read_mapping
+    return {k: _reader.read_elem(v) for k, v in dict(elem).items()}
+               ~~~~~~~~~~~~~~~~~^^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/utils.py", line 210, in func_wrapper
+    return func(*args, **kwargs)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/specs/registry.py", line 287, in read_elem
+    return read_func(elem)
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_io/specs/methods.py", line 894, in read_sparse
+    return sparse_dataset(elem).to_memory()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/anndata/_core/sparse_dataset.py", line 656, in to_memory
+    mtx.data = self._data[...]
+               ~~~~~~~~~~^^^^^
+  File "h5py/_objects.pyx", line 56, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 57, in h5py._objects.with_phil.wrapper
+  File "/home/spark/miniconda3/lib/python3.13/site-packages/h5py/_hl/dataset.py", line 820, in __getitem__
+    return self._fast_reader.read(args)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+KeyboardInterrupt

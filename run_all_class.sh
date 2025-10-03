@@ -15,7 +15,7 @@ do
     --celltype-col "Class" \
     --adnc-col "ADNC" \
     --donor-col "Donor ID" \
-    --use-x-scvi \
+#    --use-x-scvi \
     --epochs 10 --batch-size 256 \
     --out-dir "$OUTDIR/$CLASS"
 done
